@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div align="center">
+    <h1>New menu</h1>
+    <form method="post" class="col-6">
+        {% csrf_token %}
+         <div align="left" class="col-auto">
+            {{ form.as_p }}
+          </div>
+        <button type="submit">Guardar</button>
+    </form>
+</div>
+{% endblock %}
